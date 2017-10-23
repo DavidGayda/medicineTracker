@@ -177,37 +177,28 @@
 		<a class="dropdown-item" href="#">
               <span class="text-success">
                 <strong>
-                  <i class="fa fa-long-arrow-up fa-fw"></i>Reminder: Take Medicine 1</strong>
+                  <button type="button" class="btn btn-outline-success btn-block" data-toggle="modal" data-target="#takeMedModal">
+                  Reminder: Take Medicine 1</strong>
+                  <div class="dropdown-message small">Due at 9:30 AM</div>
+                </button>
               </span>
-              <span class="small float-right text-muted">5:15 PM</span>
-              <div class="dropdown-message small">1 Pill Due at 5:30 PM</div>
+
             </a>
-            <a class="dropdown-item" href="#">
-              <span class="text-success">
-                <strong>
-                  <i class="fa fa-long-arrow-up fa-fw"></i>Reminder: Take Medicine 3</strong>
-              </span>
-              <span class="small float-right text-muted">4:45 PM</span>
-              <div class="dropdown-message small">2 Pills Due at 5:00 PM</div>
-            </a>
+
+
 
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">
               <span class="text-danger">
                 <strong>
-                  <i class="fa fa-long-arrow-down fa-fw"></i>Reminder: Take Medicine 2 (Missed)</strong>
+                  <button type="button" class="btn btn-danger btn-block">
+                </i>Alert: Medicine 2 (Missed)</strong>
+                <div class="dropdown-message small">1 Injection Due at 6:00 AM</div>
+              </button>
               </span>
-              <span class="small float-right text-muted">9:45 AM</span>
-              <div class="dropdown-message small">1 Injection Due at 10:00 AM</div>
+
             </a>
-			            <a class="dropdown-item" href="#">
-              <span class="text-success">
-                <strong>
-                  <i class="fa fa-long-arrow-up fa-fw"></i>Reminder: Take Medicine 1</strong>
-              </span>
-              <span class="small float-right text-muted">5:15 AM</span>
-              <div class="dropdown-message small">1 Pill Due at 5:30 AM</div>
-            </a>
+
 
             <div class="dropdown-divider"></div>
             <a class="dropdown-item small" href="#">View all alerts</a>
@@ -447,6 +438,24 @@
     <script src="js/sb-admin-datatables.min.js"></script>
     <script src="js/sb-admin-charts.min.js"></script>
   </div>
+  <!-- Modal -->
+  <div class="modal fade" id="takeMedModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="takeMedModal">Take Medicine?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success" data-dismiss="modal">Take Medicine</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 
 </html>
